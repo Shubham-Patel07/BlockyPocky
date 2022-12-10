@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Metamask Login</title>
+        <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet" />
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+    </head>
+    <body class="h-screen flex flex-col items-center justify-center">
+        <button class="bg-purple-500 hover:bg-purple-700 text-white font-bold py-2 px-4 rounded">Login With Metamask</button>
+        <script>
+
+            const loginButton = document.getElementById('loginButton')
+
+            function toggleButton(){
+                if (window.ethereum === null) {
+                    loginButton.innerText = 'MetaMask is not installed'
+                    loginButton.classList.remove("bg-purple-500", "text-white")
+                    loginButton.classList.add("bg-grey-500", "text-grey-800", "cursor")
+                    window.alert("Hewoooo!");
+
+                }
+            }
+
+            window.addEventListener('DOMContentLoaded', (event) => {
+                toggleButton();
+            });
+        </script>
+        
+        <script src="" async defer></script>
+    </body>
+</html>
