@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import Web3 from 'web3';
 import './App.css';
 import {CONTRACT_ABI, CONTRACT_ADDRESS} from './consts'
+const uploadToIPFS = require("./utils");
 
 const web3 = new Web3(window.web3.currentProvider);
 /* var web3 = new Web3(new Web3.providers.HttpProvider('http://localhost:7545')); */
@@ -33,6 +34,10 @@ function App() {
 		            console.log("Contract Address:", receipt.contractAddress);
 				})
 				.then((initialContract) => {
+
+					let text = "asdf";
+					uploadToIPFS(text);
+
 					initialContract.methods.textEdit("inputhash", "prevHash", 5005, "ipfshash", acc[0]).call((err, data) => {
 						                console.log("Initial Data:", data);
 					});
