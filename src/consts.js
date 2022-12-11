@@ -1,6 +1,6 @@
 export const CONTRACT_ABI = require('./abi/TextUpload.json')
 
-export const CONTRACT_ADDRESS = "0xbAe1c0D33A6e220C276E834DB5027315AD12eB7B";
+export const CONTRACT_ADDRESS = "0x6a11f557eC2e2C911d12F44ffC3Aac8e7131B2C5";
 
 /*
  * Metadata and sources of "textupload" were published successfully. 

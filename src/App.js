@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import Web3 from 'web3';
 import './App.css';
 import {CONTRACT_ABI, CONTRACT_ADDRESS} from './consts'
-const uploadToIPFS = require("./utils");
+const {uploadToIPFS} = require("./utils");
 
 const web3 = new Web3(window.web3.currentProvider);
 /* var web3 = new Web3(new Web3.providers.HttpProvider('http://localhost:7545')); */
@@ -28,7 +28,8 @@ function App() {
 			}
 			const contract = new web3.eth.Contract(CONTRACT_ABI['abi'], CONTRACT_ADDRESS);
 
-			contract.deploy({data: CONTRACT_ABI['bytecode']})
+				
+			let deployedContract = contract.deploy({data: CONTRACT_ABI['bytecode']})
 				.send({from: acc[0]})
 				.on('receipt', (receipt) => {
 		            console.log("Contract Address:", receipt.contractAddress);
@@ -38,11 +39,14 @@ function App() {
 					let text = "asdf";
 					uploadToIPFS(text);
 
-					initialContract.methods.textEdit("inputhash", "prevHash", 5005, "ipfshash", acc[0]).call((err, data) => {
-						                console.log("Initial Data:", data);
-					});
+					initialContract.methods.textEdit("currHash", "newHash", "ipfshash", acc[0]).send({
+						from: acc[0]
+					}, (err, trasHash) => {
+						console.log("Transaction hash: " + trasHash);
+						contract.methods.returnValues("newHash").call().then(console.log);
+					})
 
-			});
+				});
 		});
 
 
