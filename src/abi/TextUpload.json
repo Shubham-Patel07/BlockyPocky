@@ -49,8 +49,7 @@
         }
       ],
       "stateMutability": "view",
-      "type": "function",
-      "constant": true
+      "type": "function"
     },
     {
       "inputs": [
@@ -116,8 +115,7 @@
         }
       ],
       "stateMutability": "view",
-      "type": "function",
-      "constant": true
+      "type": "function"
     }
   ],
   "metadata": "{\"compiler\":{\"version\":\"0.8.17+commit.8df45f5f\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"string\",\"name\":\"blockHash\",\"type\":\"string\"},{\"indexed\":false,\"internalType\":\"string\",\"name\":\"prevHash\",\"type\":\"string\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"timeStamp\",\"type\":\"uint256\"},{\"indexed\":false,\"internalType\":\"string\",\"name\":\"ipfsHash\",\"type\":\"string\"},{\"indexed\":false,\"internalType\":\"string\",\"name\":\"account\",\"type\":\"string\"}],\"name\":\"textCopied\",\"type\":\"event\"},{\"inputs\":[],\"name\":\"count\",\"outputs\":[{\"internalType\":\"uint16\",\"name\":\"\",\"type\":\"uint16\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"returnValues\",\"outputs\":[{\"internalType\":\"string\",\"name\":\"\",\"type\":\"string\"},{\"internalType\":\"string\",\"name\":\"\",\"type\":\"string\"},{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"},{\"internalType\":\"string\",\"name\":\"\",\"type\":\"string\"},{\"internalType\":\"string\",\"name\":\"\",\"type\":\"string\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"string\",\"name\":\"inputBlockHash\",\"type\":\"string\"},{\"internalType\":\"string\",\"name\":\"inputPrevHash\",\"type\":\"string\"},{\"internalType\":\"uint256\",\"name\":\"inputTimeStamp\",\"type\":\"uint256\"},{\"internalType\":\"string\",\"name\":\"inputIpfsHash\",\"type\":\"string\"},{\"internalType\":\"string\",\"name\":\"inputAccount\",\"type\":\"string\"}],\"name\":\"textEdit\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"project:/contracts/textUpload.sol\":\"demo\"},\"evmVersion\":\"london\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"project:/contracts/textUpload.sol\":{\"keccak256\":\"0xe14605bea133311985ac027e6d32ab988707919ee7e858e53215f69df8bcf7d0\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://15ce4e6fff3d80c7a8ddf5e650c05251eff5d83fcbe6153f9a16b34b26cf208e\",\"dweb:/ipfs/QmcPGMZeV2xREgQyLB3822ve7LfpgZVzoc9fA6pnkPKeqt\"]}},\"version\":1}",
@@ -7580,17 +7578,9 @@
     "name": "solc",
     "version": "0.8.17+commit.8df45f5f.Emscripten.clang"
   },
-  "networks": {
-    "5777": {
-      "events": {},
-      "links": {},
-      "address": "0xbAe1c0D33A6e220C276E834DB5027315AD12eB7B",
-      "transactionHash": "0xdeefa8aa885f08383bdb62e11a6331c7974d7e63101e7a77561d8dc4654f7d77"
-    }
-  },
+  "networks": {},
   "schemaVersion": "3.4.11",
-  "updatedAt": "2022-12-10T23:37:00.595Z",
-  "networkType": "ethereum",
+  "updatedAt": "2022-12-10T23:17:24.034Z",
   "devdoc": {
     "kind": "dev",
     "methods": {},
